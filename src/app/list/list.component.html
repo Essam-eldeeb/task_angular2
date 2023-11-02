@@ -1,0 +1,36 @@
+<div class="container">
+
+    <div class="card">
+      <div class="card-body">
+        <table class="table table-hover table-dark">
+          <thead>
+            <tr>
+              <th scope="col">First name</th>
+              <th scope="col">Last name</th>
+              <th scope="col">email</th>
+              <th scope="col">source</th>
+              <th scope="col">duplicates-of</th>
+              <th>home phone</th>
+              <th>more details</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr *ngFor="let data of alldata">
+              <th >{{data["first_name"]}}</th>
+              <td>{{data['last_name']}}</td>
+              <td>{{data['email']}}</td>
+              <td>{{data['source']}}</td>
+              <td>{{data['duplicate_of']}}</td>
+
+              <td >{{data['home_phone']}}</td>
+              <td><a class="btn btn-success" routerLink='/listdetails/{{data["lead_id"]}}'>potential_duplicates</a></td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+</div>
